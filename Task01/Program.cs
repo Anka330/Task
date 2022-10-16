@@ -6,9 +6,9 @@
 // a = 9; b = -3 -> да
 
 Console.Write("Введите число №1: ");
-int a = Convert.ToInt32(Console.Readline());
+int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число №2: ");
-int b = Convert.ToInt32(Console.Readline());
+int b = Convert.ToInt32(Console.ReadLine());
 
 if (a == b * b)
 {
