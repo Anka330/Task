@@ -4,7 +4,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.Write("Введите число: ");
+Console.Write("Введите положительное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 if (num > 99)
