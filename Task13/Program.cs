@@ -18,7 +18,6 @@ else
 }
 int ThirdNumber(int number)
 {
-    int finalNumber = 0;
     while (number >= 1000)
     {
         number = number / 10;
