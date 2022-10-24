@@ -25,12 +25,12 @@ int Palindrom(int number)
     int lastNum = 0; //последняя цифра числа
     while (number >= 1)
     {
-               
-        lastNum  = number % 10;
+
+        lastNum = number % 10;
         number = number / 10;
         newNum = lastNum * count + newNum;
-        count = count/10;
+        count = count / 10;
     }
-    
+
     return newNum;
 }
