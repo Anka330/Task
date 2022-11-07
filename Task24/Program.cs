@@ -14,10 +14,10 @@ int SumNumbers(int num)
 
     for (int i = 1; i <= num; i++)
     {
-        sum += i; // sum = sum + 1
+        sum += i; // sum = sum + 1;
     }
 
-    return sum;
+    return sum; 
 }
 
 if (a > 0)
