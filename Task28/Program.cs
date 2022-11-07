@@ -5,7 +5,7 @@
 // 4 -> 24
 // 5 -> 120
 
-Console.Write("Введтите число: ");
+Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 int Multipl(int num)
@@ -14,9 +14,8 @@ int Multipl(int num)
 
     for (int i = 1; i <= num; i++)
     {
-        mult *= i; // sum = sum + 1
+        mult *= i;
     }
-
     return mult;
 }
 
