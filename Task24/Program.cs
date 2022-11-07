@@ -20,9 +20,9 @@ int SumNumbers(int num)
     return sum;
 }
 
-if(a>0)
+if (a > 0)
 {
-int sumNumbers = SumNumbers(a);
-Console.WriteLine($"Сумма чисел от 1 до  {a} = {sumNumbers}");
+    int sumNumbers = SumNumbers(a);
+    Console.WriteLine($"Сумма чисел от 1 до  {a} = {sumNumbers}");
 }
 else Console.WriteLine("Введено  некорректное число! Требуется целое положительное число!!!");
