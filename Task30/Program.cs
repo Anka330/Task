@@ -4,9 +4,7 @@
 // [1,0,1,1,0,1,0,0] .
 
 
-//int[] array = new int[8];
-
-void FillArray(int[] array)
+/*void FillArray(int[] array)
 {
 
     for (int i = 0; i < array.Length; i++)
@@ -33,6 +31,36 @@ void PrintArray(int[] array)
 
 int[] arr = new int[8];
 FillArray(arr);
-PrintArray(arr);
+PrintArray(arr);*/
+
+int[] CreateArray(int len)
+{
+    int[] arr = new int[len];
+    Random rnd = new Random();
+    for (int i = 0; i < len; i++)
+    {
+        arr[i] = rnd.Next(0, 2);
+    }
+    return arr;
+}
+
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i]);
+        if (i < arr.Length - 1) Console.Write(",");
+    }
+    Console.WriteLine("]");
+}
+
+Console.Write("Введите количество элементов массива: ");
+int length = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArray(length);
+PrintArray(array);
+
+
 
 
