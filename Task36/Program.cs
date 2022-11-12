@@ -29,6 +29,7 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
+
 int SummOddNum(int[] arr)
 {
     int summ = 0;
