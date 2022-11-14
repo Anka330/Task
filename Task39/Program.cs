@@ -43,4 +43,4 @@ PrintArray(arr);
 
 
 //Array.Reverse(arr); // встроенный метод на разворот массива
-//PrintArray(arr);
+//PrintArray(arr); // печать массива
