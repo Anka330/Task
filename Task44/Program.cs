@@ -16,7 +16,6 @@ int[] CreateArrayFib(int number)
     return arr;
 }
 
-
 void PrintArray(int[] arr)
 {
     Console.Write("[");
@@ -28,7 +27,10 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
+
+Console.WriteLine("Программа выводит первые N чисел Фибоначчи.");
 Console.WriteLine("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[] fib = CreateArrayFib(n);
+Console.Write($"Первые {n} чисел Фибоначчи: ");
 PrintArray(fib);
