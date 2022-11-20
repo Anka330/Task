@@ -28,7 +28,7 @@ void PrintMatrix(int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5} | ");
-            else Console.Write($"{matrix[i, j], 5}");
+            else Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine(" | ");
     }
@@ -37,14 +37,16 @@ void PrintMatrix(int[,] matrix)
 int FindSumDiagonal(int[,] matrix)
 {
     int sum = default;
-    for (int i = 0; i < matrix.GetLength(0) && i<matrix.GetLength(1); i++)
+    for (int i = 0; i < matrix.GetLength(0) && i < matrix.GetLength(1); i++)
     {
-        sum += matrix[i,i]
+        sum += matrix[i, i];
     }
     return sum;
 }
 
-int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+int[,] array2D = CreateMatrixRndInt(3, 4, -10, 10);
 PrintMatrix(array2D);
+int result = FindSumDiagonal(array2D);
+Console.WriteLine($"Сумма элементов, стоящих на главной диагонали = {result}");
 
 
