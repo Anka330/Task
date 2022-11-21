@@ -42,18 +42,19 @@ void PrintMatrix(int[,] matrix)
 void FindArrElemntIndex(int[,] matrix, int row, int column)
 
 {
-    if (row < matrix.GetLength(0) && column < matrix.GetLength(1))
+    if (row >= 0 && row < matrix.GetLength(0) && column >= 0 && column < matrix.GetLength(1))
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                if (i == row && j == column)
-                {
-                    Console.WriteLine($" Элемент с позициями [{row}, {column}] = {matrix[i, j]} ");
-                }
-            }
-        }
+        Console.WriteLine($" Элемент с позициями [{row}, {column}] = {matrix[row, column]} ");
+        // for (int i = 0; i < matrix.GetLength(0); i++)
+        // {
+        //     for (int j = 0; j < matrix.GetLength(1); j++)
+        //     {
+        //         if (i == row && j == column)
+        //         {
+        //             Console.WriteLine($" Элемент с позициями [{row}, {column}] = {matrix[i, j]} ");
+        //         }
+        //     }
+        // }
     }
     else Console.WriteLine($" Элемента с позициями [{row}, {column}] в массиве нет! ");
 
