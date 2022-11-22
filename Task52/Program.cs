@@ -63,6 +63,7 @@ double[] AverageColumns(int[,] matrix)
 
 void PrintArrayDouble(double[] array)
 {
+    Console.Write("Среднее арифметическое каждого столбца: ");
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
