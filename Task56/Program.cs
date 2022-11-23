@@ -68,13 +68,13 @@ void PrintArray(int[] array)
 
 int MinSumElemStr(int[] array)
 {
-    int strMin = array[0];
+    int sumStrMin = array[0];
     int position = 0;
     for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] < strMin)
+        if (array[i] < sumStrMin)
         {
-            strMin = array[i];
+            sumStrMin = array[i];
             position = i;
         }
 
