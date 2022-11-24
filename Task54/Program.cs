@@ -49,25 +49,19 @@ int[,] SortStrMatrix(int[,] matrix)
     int max = matrix[row, column];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-
         for (int j = 0; j < matrix.GetLength(1) - 1; j++)
         {
-            for (int m = 0; m < matrix.GetLength(1) - 1; m++)
+            for (int k = 0; k < matrix.GetLength(1) - 1; k++)
             {
-                if (matrix[i, j + 1] >= max)
+                if (matrix[i, k + 1] > matrix[i, k])
                 {
-                    max = matrix[i, j + 1];
-                    int temp = matrix[row, column];
-                    matrix[row, column] = matrix[i, j + 1];
-                    matrix[i, j + 1] = temp;
-                    j = column;
-
-                    Console.WriteLine($"Макс: {max}");
-                    Console.WriteLine($"j: {j}");
+                    max = matrix[i, k + 1];
+                    int temp = matrix[i, k + 1];
+                    matrix[i, k + 1] = matrix[i, k];
+                    matrix[i, k] = temp;
+                    k = 0;
                 }
             }
-
-
         }
     }
     return matrix;
