@@ -4,14 +4,16 @@
 // 453 -> 12
 // 45 -> 9
 
-Console.Write("Введите натуральное число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+
 
 int SumNumbers(int number)
 {
     if (number == 0) return 0;
     return number % 10 + SumNumbers(number / 10);
 }
+
+Console.Write("Введите натуральное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
 int sumNumbers = SumNumbers(num);
 Console.Write($"Cумма цифр числа {num} = {sumNumbers}");
