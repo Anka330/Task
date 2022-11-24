@@ -38,14 +38,61 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+int[,] MultMatrix(int[,] matr1, int[,] matr2)
+{
+    int[,] multipleMatrix = new int[matr1.GetLength(0), matr2.GetLength(1)];
+    for (int i = 0; i < matr1.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr2.GetLength(1); j++)
+        {
+            int n = 0;
+            while (n < matr2.GetLength(0))
+            {
+                multipleMatrix[i, j] += matr1[i,n]*matr2[n,j];
+                n++;
+            }
 
 
+        }
 
-Console.Write("Введите количество строк массива: m = ");
+    }
+    return multipleMatrix;
+
+}
+
+
+Console.Write("Введите количество строк матрицы 1: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов массива: n = ");
+Console.Write("Введите количество столбцов матрицы 1: ");
 int n = Convert.ToInt32(Console.ReadLine());
-
-int[,] matrix = CreateMatrixRndInt(m, n, 0, 9);
-PrintMatrix(matrix);
 Console.WriteLine();
+
+Console.Write("Введите количество строк матрицы 2 : ");
+int k = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов матрицы 2: ");
+int l = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+
+
+if (n == k)
+{
+    int[,] matrix1 = CreateMatrixRndInt(m, n, 0, 9);
+    Console.WriteLine("Первая матрица: ");
+    PrintMatrix(matrix1);
+    Console.WriteLine();
+
+    int[,] matrix2 = CreateMatrixRndInt(k, l, 0, 9);
+    Console.WriteLine("Вторая матрица: ");
+    PrintMatrix(matrix2);
+    Console.WriteLine();
+
+    int[,] multMatrix = MultMatrix(matrix1, matrix2); //m,l - размеры новой матрицы
+    Console.WriteLine("Произведение двух матриц: ");
+    PrintMatrix(multMatrix);
+
+
+}
+else
+{
+    Console.WriteLine("Матрицу 1 нельзя умножить на матрицу 2. Т.к. число столбцов матрицы 1 не равно числу строк матрицы 2");
+}
